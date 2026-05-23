@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* scroll smooth */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #fff5f7;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(37, 22, 5);
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-kiri{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-kanan{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-kanan a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-kanan a:hover{
+    color: pink;
+}
+
+/* display flex agar sejajar */
+/*list style agar ilang titiknya */
+
+/* home */
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background: linear-gradient(
+        to right,
+        rgb(104, 70, 51),
+        rgb(109, 78, 54)
+    );
+    color: white;
+}
+
+.home-kiri{
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    gap: 20px;
+}
+
+.home-kiri h1{
+    font-size: 60px;
+}
+
+.home-kiri p{
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* button */
+.btn{
+    width: fit-content;
+    padding: 14px 28px;
+    background-color: white;
+    color: rgb(37, 22, 5);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: pink;
+    transform: scale(1.05);
+}
+
+/* foto */
+.home-kanan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto{
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.foto:hover{
+    transform: scale(1.03);
+}
+
+/* about */
+.about{
+    padding: 100px 50px;
+    text-align: center;
+    background-color: #fff0f3;
+}
+
+.about h1{
+    font-size: 45px;
+    color: rgb(37, 22, 5);
+    margin-bottom: 25px;
+}
+
+.about p{
+    max-width: 800px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* contact */
+.contact{
+    padding: 100px 50px;
+    text-align: center;
+    background-color: #fae6c7;
+}
+
+.contact h1{
+    font-size: 45px;
+    color: rgb(37, 22, 5);
+    margin-bottom: 20px;
+}
+
+.contact p{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 35px;
+}
+
+/* membuat button contact */
+.contact-button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-button a{
+    text-decoration: none;
+    background-color: rgb(37, 22, 5);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-button a:hover{
+    background-color: rgb(37, 22, 5);
+    transform: translateY(-5px);
+}
+
+footer{
+    background-color: rgb(37, 22, 5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* responsive */
+@media(max-width: 768px){
+    nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .home{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home-kiri{
+        align-items: center;
+    }
+
+    .home-kiri h1{
+        font-size: 45px;
+    }
+
+    .foto{
+        width: 250px;
+    }
+}
